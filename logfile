@@ -1,0 +1,213 @@
+/Users/syed44/telebot/atmocean/job_bot_atmocean_cron.sh: line 8: python: command not found
+2023-October
+Posted ES_JOBS
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Posted Met-Jobs
+Posted EGU-Jobs
+2023-October
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
+2023-October
+Message sent successfully.
+Message sent successfully.
+Posted ES_JOBS
+Message sent successfully.
+Message sent successfully.
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-01
+2023-October
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Posted ES_JOBS
+Message sent successfully.
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-02
+2023-November
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Failed to send the message.
+Failed to send the message.
+Failed to send the message.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Failed to send the message.
+Posted ES_JOBS
+Traceback (most recent call last):
+  File "/Users/syed44/telebot/atmocean/post_jobs.py", line 26, in <module>
+    metjobs()
+  File "/Users/syed44/telebot/atmocean/met_jobs.py", line 64, in metjobs
+    pub_date_datetime = datetime.strptime(pub_date[:25], '%a, %d %b %Y %H:%M:%S')
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains:  
+Date: 2023-11-03
+2023-November
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Message sent successfully.
+Posted ES_JOBS
+Traceback (most recent call last):
+  File "/Users/syed44/telebot/atmocean/post_jobs.py", line 26, in <module>
+    metjobs()
+  File "/Users/syed44/telebot/atmocean/met_jobs.py", line 64, in metjobs
+    pub_date_datetime = datetime.strptime(pub_date[:25], '%a, %d %b %Y %H:%M:%S')
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains:  
+Date: 2023-11-04
+2023-November
+Failed to send the message.
+Message sent successfully.
+Posted ES_JOBS
+Traceback (most recent call last):
+  File "/Users/syed44/telebot/atmocean/post_jobs.py", line 26, in <module>
+    metjobs()
+  File "/Users/syed44/telebot/atmocean/met_jobs.py", line 64, in metjobs
+    pub_date_datetime = datetime.strptime(pub_date[:25], '%a, %d %b %Y %H:%M:%S')
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains:  
+Date: 2023-11-05
+2023-November
+Posted ES_JOBS
+Traceback (most recent call last):
+  File "/Users/syed44/telebot/atmocean/post_jobs.py", line 26, in <module>
+    metjobs()
+  File "/Users/syed44/telebot/atmocean/met_jobs.py", line 64, in metjobs
+    pub_date_datetime = datetime.strptime(pub_date[:25], '%a, %d %b %Y %H:%M:%S')
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains:  
+Date: 2023-11-06
+2023-November
+Posted ES_JOBS
+Traceback (most recent call last):
+  File "/Users/syed44/telebot/atmocean/post_jobs.py", line 26, in <module>
+    metjobs()
+  File "/Users/syed44/telebot/atmocean/met_jobs.py", line 64, in metjobs
+    pub_date_datetime = datetime.strptime(pub_date[:25], '%a, %d %b %Y %H:%M:%S')
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains:  
+Date: 2023-11-07
+2023-November
+Posted ES_JOBS
+Traceback (most recent call last):
+  File "/Users/syed44/telebot/atmocean/post_jobs.py", line 26, in <module>
+    metjobs()
+  File "/Users/syed44/telebot/atmocean/met_jobs.py", line 64, in metjobs
+    pub_date_datetime = datetime.strptime(pub_date[:25], '%a, %d %b %Y %H:%M:%S')
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains:  
+Date: 2023-11-08
+2023-November
+Posted ES_JOBS
+Traceback (most recent call last):
+  File "/Users/syed44/telebot/atmocean/post_jobs.py", line 26, in <module>
+    metjobs()
+  File "/Users/syed44/telebot/atmocean/met_jobs.py", line 64, in metjobs
+    pub_date_datetime = datetime.strptime(pub_date[:25], '%a, %d %b %Y %H:%M:%S')
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Users/syed44/miniconda3/lib/python3.9/_strptime.py", line 352, in _strptime
+    raise ValueError("unconverted data remains: %s" %
+ValueError: unconverted data remains:  
+Date: 2023-11-09
+2023-November
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-10
+2023-November
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-11
+2023-November
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-12
+2023-November
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-13
+2023-November
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-14
+2023-November
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-15
+2023-November
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
+Date: 2023-11-16
+2023-November
+Posted ES_JOBS
+Posted Met-Jobs
+Posted EGU-Jobs
