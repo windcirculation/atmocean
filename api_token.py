@@ -1,2 +1,4 @@
+import os
+
 def api_key():
-    return '6641176138:AAHex-fMLwcqz3f2EAp5RbRoMwQBTrzeKxE'
+    return os.getenv('TELEGRAM_BOT_TOKEN')
