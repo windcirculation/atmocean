@@ -1,0 +1,17 @@
+name: Test Workflow
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # This runs the job every 5 minutes
+  workflow_dispatch:
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run a one-liner script
+        run: echo "Hello, world!"
