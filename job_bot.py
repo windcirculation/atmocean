@@ -4,27 +4,25 @@ from api_token import api_key
 
 bot_token = api_key()
 
-# Replace 'YOUR_BOT_TOKEN' with your actual bot token from BotFather
-
 def bot_status(bot_token):
     """Check bot status"""
     # URL to check the status of BotFather
     url = f'https://api.telegram.org/bot{bot_token}/getMe'
 
-    response = requests.get(url)
-
-    if response.status_code == 200:
+    try:
+        response = requests.get(url)
+        response.raise_for_status()  # Will raise an HTTPError if the HTTP request returned an unsuccessful status code
         data = response.json()
+
         if data.get('ok'):
             bot_info = data.get('result')
             print(f"Bot ID: {bot_info['id']}")
             print(f"Bot Name: {bot_info['first_name']} is live.")
             print(f"Bot Username: {bot_info['username']}")
         else:
-            print("AtmoceanBot's status check failed.")
-    else:
-        print("Failed to connect to the AtmoceanBot API.")
-
+            print("Bot status check failed. Response JSON: ", data)
+    except requests.exceptions.RequestException as e:
+        print(f"Failed to connect to the AtmoceanBot API. Error: {e}")
 
 def postbot(bot_token, message_text):
     """Post Jobs"""

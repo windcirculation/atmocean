@@ -76,8 +76,9 @@ def metjobs(post_jobs=True, jobbot_status=False, current_date=None):
                 # print("--------------------")
                 # print(formatted_date_str, current_date)
                 # Define keywords to search for
-                keywords = ["phd", "ph.d.", " doctoral", "ms ", "m.s.", "master", "assistantship", "fellowship"]
-
+                keywords = ["phd", "ph.d.", "doctoral", "ms ",
+                            "m.s.", "master", "assistantship",
+                            "fellowship", "tenure", "assistant", "job"]
                 # Initialize a list to store the links containing the keywords
                 filtered_links = []
 
