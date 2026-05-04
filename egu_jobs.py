@@ -3,18 +3,15 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
-from job_bot import postbot
-from api_token import api_key
-
-# Function to get the bot token from api_token
-bot_token = api_key()
+from atmocean.job_bot import postbot
+from atmocean.api_token import api_key
 
 def egujobs(post_jobs=True, jobbot_status=False, current_date=None, verbose=False):
     if jobbot_status:
         sign1 = f"\n----- ** {datetime.now().strftime('%Y-%b-%d')} ** -----"
         sign2 = f"\nEGU Jobs"
         message_text = f" *{'Job_Bot Status: Active'}* {sign1}{sign2}"
-        postbot(bot_token, message_text)
+        postbot(api_key(), message_text)
 
     if post_jobs:        
         if current_date is None:
@@ -24,7 +21,7 @@ def egujobs(post_jobs=True, jobbot_status=False, current_date=None, verbose=Fals
             current_date = current_date_hawaii.strftime("%Y-%m-%d")
 
         if verbose:
-            print(f"Bot token: {bot_token}")
+            print(f"Bot token: {api_key()}")
             print(f"Current date in Hawaii timezone: {current_date}")
 
         base_url = 'https://www.egu.eu/jobs/?limit=10&sortby=-created_at&page=1&keywords=&sector=10&sector=20&sector=30&employment_level=30'
@@ -117,7 +114,7 @@ def egujobs(post_jobs=True, jobbot_status=False, current_date=None, verbose=Fals
 
                             full_post = job_heading + job_desc + "---------"
                             # Uncomment the line below to post to Telegram
-                            postbot(bot_token, full_post)
+                            postbot(api_key(), full_post)
                             # print(full_post)
         else:
             print(f"Failed to retrieve jobs. HTTP Status code: {response.status_code}")

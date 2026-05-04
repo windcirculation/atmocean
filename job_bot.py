@@ -1,8 +1,58 @@
-import requests
-from api_token import api_key
+"""Telegram bot helper functions.
 
+Provides a fallback implementation for the ``requests`` library using the
+standard library ``urllib`` when ``requests`` is unavailable.
+"""
 
-bot_token = api_key()
+import json
+import urllib.parse
+import urllib.request
+
+try:
+    import requests  # type: ignore
+except ImportError:  # pragma: no cover
+    class _SimpleResponse:
+        def __init__(self, url: str, data: bytes, status: int):
+            self._url = url
+            self._data = data
+            self.status_code = status
+
+        def raise_for_status(self) -> None:
+            if not (200 <= self.status_code < 300):
+                raise urllib.error.HTTPError(
+                    self._url,
+                    self.status_code,
+                    f"HTTP error {self.status_code}",
+                    hdrs=None,
+                    fp=None,
+                )
+
+        @property
+        def text(self) -> str:
+            return self._data.decode("utf-8", errors="replace")
+
+        def json(self):  # type: ignore
+            return json.loads(self.text)
+
+    class requests:  # type: ignore
+        @staticmethod
+        def get(url: str, params: dict | None = None):
+            if params:
+                url = f"{url}?{urllib.parse.urlencode(params)}"
+            try:
+                with urllib.request.urlopen(url) as resp:
+                    data = resp.read()
+                    status = resp.getcode()
+            except urllib.error.HTTPError as e:
+                data = e.read()
+                status = e.code
+            return _SimpleResponse(url, data, status)
+
+from .api_token import api_key
+
+# The Telegram bot token is retrieved inside each helper function rather than
+# at import time. This prevents ``ValueError`` when the environment variable is
+# absent during module import.
 
 def bot_status(bot_token):
     """Check bot status"""

@@ -4,18 +4,17 @@ import requests
 import os
 import re
 import pytz
-from job_bot import postbot
-from api_token import api_key
+from atmocean.job_bot import postbot
+from atmocean.api_token import api_key
 
 # def init_bot():
-bot_token = api_key()
 
 def esjobs(post_jobs=True, jobbot_status=False, current_date=None):
     if jobbot_status:
         sign1 = f"\n----- ** {datetime.now().strftime('%Y-%b-%d')} ** -----"
         sign2 = f"\nEarth Science Jobs"
         message_text = f" *{'Job_Bot Status: Active'}* {sign1}{sign2}"
-        postbot(bot_token, message_text)
+        postbot(api_key(), message_text)
     
     if post_jobs:
         if current_date is None:
@@ -142,7 +141,7 @@ def esjobs(post_jobs=True, jobbot_status=False, current_date=None):
                         sign1 = f"\n----- ** {current_date} ** -----"
                         sign2 = f"\n"
                         message_text = f" *{header_text.title()}* \n\n{body_text}{sign1}{sign2}"
-                        postbot(bot_token, message_text)
+                        postbot(api_key(), message_text)
                         # print(message_text)
 
 # if __name__ == "__main__":

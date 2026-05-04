@@ -3,20 +3,19 @@ from bs4 import BeautifulSoup
 import requests
 import os
 import re
-from job_bot import postbot
-from api_token import api_key
+from atmocean.job_bot import postbot
+from atmocean.api_token import api_key
 import feedparser
 import pytz
 
 
-bot_token = api_key()
 
 def metjobs(post_jobs=True, jobbot_status=False, current_date=None):
     if jobbot_status:
         sign1 = f"\n----- ** {datetime.now().strftime('%Y-%b-%d')} ** -----"
         sign2 = f"\nMet-Jobs"
         message_text = f" *{'Job_Bot Status: Active'}* {sign1}{sign2}"
-        postbot(bot_token, message_text)
+        postbot(api_key(), message_text)
     
     if post_jobs:
         if current_date is None:
@@ -99,7 +98,7 @@ def metjobs(post_jobs=True, jobbot_status=False, current_date=None):
                     sign2 = f"\n--------------------"
                     link1 = f"\n{link}"
                     message_text = f" *{title}* \n\n{link1}{sign1}{sign2}"
-                    postbot(bot_token, message_text)
+                    postbot(api_key(), message_text)
                     # print(message_text)
 
 # if __name__ == "__main__":
