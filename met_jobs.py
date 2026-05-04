@@ -3,8 +3,8 @@ from bs4 import BeautifulSoup
 import requests
 import os
 import re
-from atmocean.job_bot import postbot
-from atmocean.api_token import api_key
+from job_bot import postbot
+from api_token import api_key
 import feedparser
 import pytz
 

@@ -3,8 +3,8 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from urllib.parse import urljoin
-from atmocean.job_bot import postbot
-from atmocean.api_token import api_key
+from job_bot import postbot
+from api_token import api_key
 
 def egujobs(post_jobs=True, jobbot_status=False, current_date=None, verbose=False):
     if jobbot_status:

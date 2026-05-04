@@ -1,6 +1,6 @@
-from atmocean.es_jobs_net import esjobs
-from atmocean.met_jobs import metjobs
-from atmocean.egu_jobs import egujobs
+from es_jobs_net import esjobs
+from met_jobs import metjobs
+from egu_jobs import egujobs
 from datetime import datetime
 
 def post_jobs_and_handle_errors(job_function, job_args, job_name, current_date=None):

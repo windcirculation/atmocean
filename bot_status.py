@@ -6,9 +6,9 @@ actually posting. The previous version contained merge conflict markers and a
 debug routine that masked the Telegram token – both have been removed.
 """
 
-from atmocean.es_jobs_net import esjobs
-from atmocean.met_jobs import metjobs
-from atmocean.egu_jobs import egujobs
+from es_jobs_net import esjobs
+from met_jobs import metjobs
+from egu_jobs import egujobs
 
 # Execute each job in status‑only mode. The functions themselves print concise
 # messages, but we also output a short confirmation here for clarity.

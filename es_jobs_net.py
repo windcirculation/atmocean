@@ -4,8 +4,8 @@ import requests
 import os
 import re
 import pytz
-from atmocean.job_bot import postbot
-from atmocean.api_token import api_key
+from job_bot import postbot
+from api_token import api_key
 
 # def init_bot():
 
