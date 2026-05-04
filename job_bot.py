@@ -48,7 +48,7 @@ except ImportError:  # pragma: no cover
                 status = e.code
             return _SimpleResponse(url, data, status)
 
-from .api_token import api_key
+from api_token import api_key
 
 # The Telegram bot token is retrieved inside each helper function rather than
 # at import time. This prevents ``ValueError`` when the environment variable is
