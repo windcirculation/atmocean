@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "atmocean/run.py",
+        "src": "run.py",
         "use": "@vercel/python"
       }
     ],
     "routes": [
       {
         "src": "/api/run",
-        "dest": "atmocean/run.py"
+        "dest": "run.py"
       }
     ],
     "crons": [

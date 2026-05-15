@@ -1,17 +1,25 @@
-import subprocess
+import sys
 import os
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+from es_jobs_net import esjobs
+from met_jobs import metjobs
+from egu_jobs import egujobs
+from datetime import datetime
+
 def handler(request):
-    try:
-        # Run the post_jobs.py script
-        result = subprocess.run(['python', 'post_jobs.py'], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-        
-        return {
-            "statusCode": 200,
-            "body": result.stdout
-        }
-    except subprocess.CalledProcessError as e:
-        return {
-            "statusCode": 500,
-            "body": f"Error: {e.stderr}"
-        }
+    current_date = datetime.now().strftime('%Y-%m-%d')
+    results = []
+
+    for fn, name in [(esjobs, "ES_JOBS"), (metjobs, "Met-Jobs"), (egujobs, "EGU-Jobs")]:
+        try:
+            fn(current_date=current_date)
+            results.append(f"Posted {name}")
+        except Exception as e:
+            results.append(f"Error posting {name}: {e}")
+
+    return {
+        "statusCode": 200,
+        "body": "\n".join(results)
+    }
